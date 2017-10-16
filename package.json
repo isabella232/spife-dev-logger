@@ -1,0 +1,38 @@
+{
+  "name": "@npm/knork-dev-logger",
+  "version": "1.0.0",
+  "main": "dev-logger.js",
+  "bin": {
+    "knork-dev-logger": "./cli.js"
+  },
+  "scripts": {
+    "test": "TZ=UTC tap --100 test.js",
+    "lint": "standard",
+    "posttest": "npm run lint"
+  },
+  "keywords": [],
+  "author": "Chris Dickinson <chris@neversaw.us> (http://neversaw.us/)",
+  "license": "MIT",
+  "dependencies": {
+    "base-emoji": "^2.0.1",
+    "chalk": "^2.1.0",
+    "pretty-ms": "^3.0.1",
+    "split": "^1.0.1",
+    "stream-combiner": "^0.2.2",
+    "through2": "^2.0.3"
+  },
+  "devDependencies": {
+    "concat-stream": "^1.6.0",
+    "standard": "^10.0.3",
+    "tap": "^10.7.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/npm/knork-dev-logger.git"
+  },
+  "bugs": {
+    "url": "https://github.com/npm/knork-dev-logger/issues"
+  },
+  "homepage": "https://github.com/npm/knork-dev-logger#readme",
+  "description": ""
+}
