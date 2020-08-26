@@ -2,7 +2,7 @@
 
 if (process.argv[3] === '--help') {
   console.log(`
-knork-dev-logger [file]
+spife-dev-logger [file]
 
 Pretty print a NDJSON log. If \`file\` is omitted, will read on stdin.
   `.trim())
