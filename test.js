@@ -192,7 +192,7 @@ test('passes unparsable lines through', async assert => {
   assert.equal(result, 'hello world\n00:00:00 200     10ms    GET /foo (id: 📖 )\n')
 })
 
-test('non-knork request ids are passed through', async assert => {
+test('non-spife request ids are passed through', async assert => {
   id.id = 0
   const logger = createLogger()
   const currentId = id()
@@ -323,7 +323,7 @@ test('grouped (handles errors)', async assert => {
       time: date
     })).pipe(logger)
   )
-  assert.equal(result, '00:00:00 200     10ms    GET /foo (id: 📖 )\n    +50s ERR womp Error\n                  at Test.test (/Users/chris/projects/npm/knork-dev-logger/test.js:N:N)\n')
+  assert.match(result, '00:00:00 200     10ms    GET /foo (id: 📖 )\n    +50s ERR womp Error\n                  at Test.test')
 })
 
 test('grouped (handles errors w/no stack)', async assert => {
